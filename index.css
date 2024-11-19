@@ -1,0 +1,181 @@
+.navMain {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navOneChild {
+    /* border: 1px solid; */
+    width: 20%;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navChildTwo {
+    /* border: 1px solid; */
+    width: 45%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navChildTwo>a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 8px silver;
+}
+
+
+.navChildThree {
+    /* border: 1px solid red; */
+    width: 26%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navChildThree>img {
+    width: 7%;
+}
+
+.navChildThree>a>img {
+    width: 100%;
+    height: 30px;
+}
+
+
+#productMain {
+    /* border: 1px solid; */
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.productChild {
+    box-shadow: #eff2f3(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 3px solid #eff2f3;
+    width: 100%;
+    /* height: 450px; */
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+.productChild>h1 {
+    margin-top: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productChild>p {
+    color: #65a30d;
+    font-weight: 800;
+}
+
+.featuredH1 {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 24px;
+    color: #2a2a2a;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+.productImage {
+    width: 50%;
+    height: 227px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.addCartButton {
+    /* border: 1px solid; */
+    width: 140px;
+    height: 43px;
+    margin-top: 18px;
+    border-radius: 13px;
+    background-color: #65a30d;
+    color: aliceblue;
+}
+
+
+
+.addCartButton:hover {
+    border: 2px solid #65a30d;
+    background-color: white;
+    color: black;
+}
+
+
+.checkOutHeadMain {
+    text-align: center;
+    margin-top: 100px;
+    line-height: 0.8;
+}
+
+.checkOutHeadMain>h1 {
+    font-size: 43px;
+}
+
+.inputmIna {
+    display: flex;
+    justify-content: center;
+}
+
+.inputmIna1>input {
+    width: 30%;
+    height: 50px;
+    margin: 12px;
+}
+
+.inputmIna1>select {
+    width: 30%;
+    height: 50px;
+    margin: 12px;
+
+}
+
+.inputmIna1>button {
+    width: 30%;
+    height: 40px;
+    margin: 12px;
+    background-color: #65a30d;
+    border: none;
+    color: white;
+}
+
+
+.otpMain {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.otpMain>div>input {
+    margin: 12px;
+    width: 30%;
+    height: 50px;
+}
+
+
+.otpMain>div>button {
+    width: 10%;
+    height: 50px;
+    background-color: #65a30d;
+    border: none;
+    color: white;
+}
+

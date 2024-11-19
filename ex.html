@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div>
+    <h1 id="total"></h1>
+    <span id="inc" style="font-size: 40px; font-weight: bold;">+</span>
+    <span   style="font-size: 40px; font-weight: bold;" id="qun"></span>
+    <span id="dec" style="font-size: 40px; font-weight: bold;">-</span>
+ </div>
+</body>
+<script>
+    let total = document.getElementById("total")
+    let val = 1
+    total.innerText = val
+   let qun = document.getElementById("qun")
+   let quntity = 1
+
+
+   qun.innerText = quntity
+   let inc = document.getElementById("inc")
+    inc.addEventListener("click", incfun)
+
+   let dec = document.getElementById("dec")
+     dec.addEventListener("click", decfun)
+
+
+     function incfun(){
+        quntity++;
+        val = val*quntity
+          qun.innerText = quntity
+        total.innerText = val
+
+     }
+
+     function decfun(){
+        quntity--;
+       val = val/quntity
+       qun.innerText = quntity
+
+        console.log(quntity)
+          qun.innerText = quntity
+             total.innerText = val
+     }
+
+ 
+</script>
+</html>
