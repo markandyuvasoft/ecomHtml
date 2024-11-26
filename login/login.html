@@ -3,65 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login Page</title>
+    <title>login</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../index.css">
 </head>
 
-
-<!-- nav -->
-<div class="navMain">
-
-    <div class="navOneChild">
-        <img src="../img/logo.png" alt="">
-    </div>
-
-    <div class="navChildTwo">
-        <a href="../index.html">Home</a>
-        <a href="">Shop</a>
-        <a href="">Blog</a>
-        <a href="../register/register.html">Register</a>
-        <!-- <a href="../login/login.html">Login</a> -->
-    </div>
-
-    <div class="navChildThree" id="navChildThrees">
-        <img src="../img/search-137.png" alt="">
-        <img src="../img/4219909.png" alt="">
-        <img src="../img/219988.png" alt="">
-        <img src="../img/images.png" alt="">
-    </div>
-
-</div>
-
-<!-- nav -->
-
 <body>
 
-    <div class="border-2 w-1/2 h-96  m-auto mt-16 bg-indigo-200">
+    <div class="navMain">
 
-        <h1 class="text-center font-bold text-4xl mt-5">Login Here !!</h1>
-        <form action="" class="">
+        <div class="navOneChild">
+            <img src="../img/logo.png" alt="">
+        </div>
 
-            <div class="w-1/2 m-auto">
-                <input id="email" class="border-2 w-11/12 p-2 mt-4" type="email" placeholder="Enter Email" required>
+        <div class="navChildTwo">
+            <a href="../index.html">Home</a>
+            <a href="">Shop</a>
+            <a href="">Blog</a>
+            <a href="../register/register.html">Register</a>
+        </div>
 
-                <input id="password" class="border-2 w-11/12 p-2 mt-4 " type="password" placeholder="Enter Password" required>
-                
-                <div class="m-auto w-1/2">
-                    <input class="border-2 border-black rounded-2xl w-3/4 p-2 mt-4" type="submit">
-                </div>
-
-            </div>
-
-
-        </form>
+        <div class="navChildThree" id="navChildThrees">
+            <img src="../img/search-137.png" alt="">
+            <img src="../img/4219909.png" alt="">
+            <img src="../img/219988.png" alt="">
+            <img src="../img/images.png" alt="">
+        </div>
 
     </div>
+
+
+    <div class="border-2 rounded-3xl w-4/5  m-auto mt-16 block sm-flex xl:flex">
+
+        <div class=" w-full sm:w-full lg:w-2/4">
+            <div>
+                <img class="w-full h-[622px] sm:w-full xl:w-full lg:w-full rounded-l-3xl"
+                    src="https://themewagon.github.io/stylish/images/card-image1.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="w-1/2">
+
+            <div>
+                <h1 class="font-bold  sm:text-4xl text-xl md:text-4xl text-center mt-11">Login Here!!</h1>
+            </div>
+
+            <form action="">
+                <div class="block sm:block xl:flex lg:flex justify-center  mt-32">
+                    <div class="m-4">
+                        <div class="mt-6">
+                            <label class="font-semibold" for="">Enter Email</label>
+                        </div>
+                        <div>
+                            <input class="border-b focus:outline-none sm:w-96 h-11" type="email" placeholder="Email..."
+                                id="email" required>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="sm:text-[16px] text-[13px] lg:text-[16px] font-semibold" for="">Enter
+                                Password</label>
+                        </div>
+
+                        <div>
+                            <input class="border-b focus:outline-none sm:w-96 h-11" type="password"
+                                placeholder="Password" id="password" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="m-4 mt-12 flex justify-center">
+                    <input
+                        class="bg-purple-600 w-36 h-11 text-white font-bold rounded-3xl hover:bg-white hover:border-2 hover:border-purple-700 hover:text-black"
+                        type="submit">
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
 </body>
 
-<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <script src="./login.js"></script>
-
 
 </html>

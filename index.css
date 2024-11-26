@@ -4,6 +4,9 @@
     height: 100px;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #65a30d;
+    font-weight: bolder;
+
 }
 
 .navOneChild {
@@ -28,7 +31,8 @@
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    color: black;
+    color: #65a30d;
+    font-weight: bolder;
     text-shadow: 2px 2px 8px silver;
 }
 
@@ -53,6 +57,17 @@
 
 
 #productMain {
+    /* border: 1px solid; */
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 20px;
+}
+
+#productMains {
     /* border: 1px solid; */
     width: 80%;
     height: auto;
@@ -110,8 +125,19 @@
     border-radius: 13px;
     background-color: #65a30d;
     color: aliceblue;
+    margin-left: 10px;
 }
 
+.checkoutPro {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checkoutChild {
+    width: 400px;
+    height: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 
 .addCartButton:hover {
@@ -131,26 +157,30 @@
     font-size: 43px;
 }
 
-.inputmIna {
-    display: flex;
-    justify-content: center;
+.inputmIna1 {
+    /* display: flex;
+    justify-content: space-between; */
+    /* border: 1px solid; */
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .inputmIna1>input {
-    width: 30%;
+    width: 80%;
     height: 50px;
     margin: 12px;
+    margin-top: 12px;
 }
 
 .inputmIna1>select {
-    width: 30%;
+    width: 80%;
     height: 50px;
     margin: 12px;
 
 }
 
 .inputmIna1>button {
-    width: 30%;
+    width: 60%;
     height: 40px;
     margin: 12px;
     background-color: #65a30d;
@@ -179,3 +209,226 @@
     color: white;
 }
 
+
+#body {
+    background-image: url("https://preview.colorlib.com/theme/winter/img/banner_img.png.webp");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #dee4e9;
+
+}
+
+
+#cartbody {
+    /* background-image: url("https://preview.colorlib.com/theme/shopmax/images/model_3.png.webp"); */
+    background-image: url("	https://preview.colorlib.com/theme/estore/assets/img/hero/hero_man.png");
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #dee4e9;
+}
+
+
+
+
+@media all and (min-width : 480px) and (max-width : 768px) {
+
+
+
+    .navChildTwo {
+        /* border: 1px solid; */
+        width: 36%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navChildThree {
+        border: 1px solid red;
+        width: 44%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        margin-left: 12px;
+        font-size: 9px;
+    }
+
+    .navChildThree>a>img {
+        width: 131%;
+        height: 20px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        margin-left: 12px;
+        font-size: 9px;
+    }
+
+    .btnNav {
+        font-size: 11px;
+    }
+
+
+
+
+    #productMain {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 8px;
+    }
+
+    #productMains {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 8px;
+    }
+
+    .addCartButton {
+        margin-left: 7px;
+
+    }
+
+    .featuredH1 {
+        font-size: 15px;
+    }
+
+    .checkoutPro {
+        display: block;
+    }
+
+    .checkoutChild {
+        width: 100%;
+        height: 400px;
+    }
+
+    #proName {
+        font-size: 18px;
+    }
+
+    .inputmIna1 {
+        width: 85%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .otpMain>div>input {
+        width: 75%;
+    }
+
+    .otpMain>div>button {
+        width: 36%;
+    }
+
+}
+
+
+
+@media all and (min-width : 320px) and (max-width : 479px) {
+
+    .navChildTwo {
+        width: 29%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navChildTwo>a {
+        text-decoration: none;
+        font-size: 7px;
+        font-weight: bold;
+        color: #65a30d;
+        font-weight: bolder;
+        text-shadow: 2px 2px 8px silver;
+    }
+
+    .navChildThree {
+        border: 1px solid red;
+        width: 51%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #cartId {
+        width: 40px;
+    }
+
+    #cartId>a>button {
+        width: 10px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        margin-left: 12px;
+        font-size: 9px;
+    }
+
+    .navChildThree>a>img {
+        width: 131%;
+        height: 20px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        margin-left: 12px;
+        font-size: 9px;
+    }
+
+    .btnNav {
+        font-size: 11px;
+    }
+
+    #productMain {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 12px;
+    }
+
+    #productMains {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 12px;
+    }
+
+
+    .checkoutPro {
+        display: block;
+    }
+
+    .checkoutChild {
+        width: 100%;
+        height: 280px;
+    }
+
+    #proName {
+        font-size: 12px;
+    }
+
+    .inputmIna1 {
+        width: 85%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .otpMain>div>input {
+        width: 90%;
+    }
+
+    .otpMain>div>button {
+        width: 36%;
+    }
+
+    #tol {
+        font-size: 18px;
+    }
+}

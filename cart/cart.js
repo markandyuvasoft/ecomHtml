@@ -41,6 +41,11 @@ if (localUser !== null) {
     
     cartId.innerText = "Total" + " =" + Math.floor(total)
 
+    console.log(total);
+
+    localStorage.setItem("TotalAmout", JSON.stringify(total))
+    
+
 
     userLogoId.innerHTML = localUser                            //login user name show user icon logo ki jgh 
 
@@ -64,7 +69,7 @@ if (localUser !== null) {
 
 function displayProduct() {
 
-    let productMain = document.getElementById("productMain")
+    let productMain = document.getElementById("productMains")
 
 
 
@@ -122,7 +127,8 @@ function displayProduct() {
 
         CheckOutCardButton.setAttribute("class", "addCartButton")
         RemoveItem.setAttribute("class", "addCartButton")
-        RemoveItem.style.marginLeft = "70px"
+        
+        // RemoveItem.style.marginLeft = "70px"
 
         RemoveItem.addEventListener("click", function () {
             removeFun(index)
@@ -141,7 +147,8 @@ function displayProduct() {
         let decBtn = document.createElement("button")
         decBtn.innerText = "Decrement"
         decBtn.setAttribute("class", "addCartButton")
-        decBtn.style.marginLeft = "70px"
+
+        // decBtn.style.marginLeft = "70px"
 
         decBtn.addEventListener("click", function () {
             decFun(quantity, el, index, price)
