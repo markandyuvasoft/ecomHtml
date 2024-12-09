@@ -19,34 +19,7 @@
 
 <body>
 
-    <div class="navMain">
-
-        <div class="navOneChild">
-            <a href="/index.html">
-                <img src="./img/logo.png" alt="">
-            </a>
-        </div>
-
-        <div class="navChildTwo">
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">Blog</a>
-            <a id="registerId" href="./register/register.html">Register</a>
-            <a id="loginId" href="./login/login.html">Login</a>
-        </div>
-
-        <div class="navChildThree" id="navChildThree">
-            <img src="./img/search-137.png" alt="">
-
-            <a id="cartId" href=""><img src="./img/4219909.png" alt=""></a>
-
-            <a id="userId" href="">
-                <img src="./img/219988.png" alt="">
-            </a>
-            <a href=""> <img src="./img/images.png" alt=""></a>
-        </div>
-
-    </div>
+    <div id="navMain"></div>
 
     <div class="w-full h-full border-black bg-[url('../img/banner-bg.jpg')] bg-no-repeat bg-center">
         <div class="w-full md:w-2/4 h-full md:h-4/5 flex items-center justify-center px-4">
@@ -102,11 +75,10 @@
         <h1 class="featuredH1">Featured product</h1>
         <p style="text-align: center;">Bring called seed first of third give itself now ment</p>
         
-        <div id = "productMain">
-            
-        </div>
         
-    </div>
+
+
+    <div id="productMain"></div>
 
 
 
@@ -119,9 +91,25 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 
-<script src="./index.js"></script>
+
+<!-- <script src="./index.js" type="module"></script> -->
+
 
 <script src="./product/product.js">
+
+</script>
+
+
+<script type="module">
+
+    import {displayProduct, getData} from "./index.js"
+
+    let api = "https://fakestoreapi.com/products"
+    
+
+    let proData = await  getData(api)
+
+     displayProduct(proData)
 
 </script>
 

@@ -1,21 +1,46 @@
+import navbar from "./nav.js"
+let productMain = document.getElementById("productMain")
+
+
+
+let navs = navbar()
+
+let main = document.getElementById("navMain")
+
+main.innerHTML = navs
+
+
+
 let localUser = JSON.parse(localStorage.getItem("userName"))
 
-let productList = JSON.parse(localStorage.getItem("productList"))
+// let productList = JSON.parse(localStorage.getItem("productList"))
 
 
+export async function getData(api) {
+
+    let res = await fetch(api);
+
+    let data = await res.json();
+    console.log(data, "65559");
+
+
+    return data;
+}
 
 
 displayProduct()
-// console.log(localUser);
+
+console.log(localUser);
 
 
 let regisId = document.getElementById("registerId")
 let logId = document.getElementById("loginId")
 let userLogoId = document.getElementById("userId")
 let cartId = document.getElementById("cartId")
+let navChildThree = document.getElementById("navChildThree")
 
 
-cartId.href = "./cart/cart.html"
+cartId.href = "../cart/cart.html"
 
 let cartArray = JSON.parse(localStorage.getItem("AddCartData")) || []
 
@@ -27,7 +52,6 @@ let cartArray = JSON.parse(localStorage.getItem("AddCartData")) || []
 
 // console.log(userLogoId);
 
-let navChildThree = document.getElementById("navChildThree")
 
 
 // console.log(regisId);
@@ -45,6 +69,7 @@ if (localUser !== null) {
 
 
     let logout = document.createElement("button")
+    logout.style.color = "white"
 
     logout.innerText = "Logout User"
 
@@ -62,11 +87,12 @@ if (localUser !== null) {
 }
 
 
-function displayProduct() {
+export function displayProduct(data) {
 
-    let productMain = document.getElementById("productMain")
+    // let productMain = document.getElementById("productMain")
+    console.log(data, "ssssss");
 
-    productList.map((el) => {
+    data?.map((el) => {
 
 
         let div = document.createElement("div")
@@ -104,27 +130,32 @@ function displayProduct() {
 
 function addToCart(data) {
 
-    let flag = false
+    if (localUser !== null) {
 
-    console.log(data.id);
+        let flag = false
 
-    cartArray.map((el) => {
+        console.log(data.id);
 
-        if (el.id === data.id) {
-            flag = true
+        cartArray.map((el) => {
+
+            if (el.id === data.id) {
+                flag = true
+            }
+
+        })
+
+        if (flag == true) {
+            alert("product is already added")
         }
-
-    })
-
-    if (flag == true) {
-        alert("product is already added")
+        else {
+            cartArray.push(data)
+            localStorage.setItem("AddCartData", JSON.stringify(cartArray))
+            alert("product is  added")
+        }
     }
+
     else {
-        cartArray.push(data)
-        localStorage.setItem("AddCartData", JSON.stringify(cartArray))
-        alert("product is  added")
+        alert("firstly login then add to cart....")
     }
-
-
 
 }

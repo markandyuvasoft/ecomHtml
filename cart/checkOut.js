@@ -1,3 +1,35 @@
+import navbar from "../nav.js"
+let navs = navbar()
+let main = document.getElementById("navMain")
+main.innerHTML = navs
+
+
+let localUser = JSON.parse(localStorage.getItem("userName"))
+
+let regisId = document.getElementById("registerId")
+let logId = document.getElementById("loginId")
+let cartId = document.getElementById("cartId")
+let likeId = document.getElementById("likeId")
+let userLogoId = document.getElementById("userId")
+let srchId = document.getElementById("srchId")
+
+
+
+
+
+cartId.href = "../cart/cart.html"
+
+if (localUser !== null) {
+    regisId.innerHTML = null
+    logId.innerHTML = null
+    userLogoId.innerHTML = null
+    // likeId.innerHTML = null
+    // srchId.innerHTML = null
+
+}
+
+
+
 let btnCheckout = document.getElementById("btnCheckout")
 
 btnCheckout.addEventListener("click", function () {

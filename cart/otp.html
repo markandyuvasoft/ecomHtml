@@ -5,25 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="navMain">
-
-        <div class="navOneChild">
-            <a href="/index.html">
-                <!-- <img src="./img/logo.png" alt=""> -->
-            </a>
-        </div>
-
-        <div class="navChildTwo">
-            <a href="../index.html">Home</a>
-            <a href="../login/login.html">Logout</a>
-
-        </div>
-
-    </div>
+    <div id="navMain"></div>
 
     <div class="otpMain">
 
@@ -39,7 +26,14 @@
     </div>
 </body>
 
-<script>
+<script type="module">
+
+import navbar from "../nav.js"
+let navs = navbar()
+let main = document.getElementById("navMain")
+main.innerHTML = navs
+
+
     let otp = document.getElementById("otpId")
 
     otp.addEventListener("click", function () {
@@ -50,5 +44,8 @@
     })
 
 </script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 
 </html>

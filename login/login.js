@@ -1,3 +1,14 @@
+import navbar from "../nav.js"
+
+let navs = navbar()
+
+// console.log(navs);
+
+let main = document.getElementById("navMain")
+
+main.innerHTML = navs
+
+
 let form = document.querySelector("form")
 
 form.addEventListener("submit", RegisterDetails)
@@ -45,5 +56,6 @@ function RegisterDetails(event) {
     }
 
 }
+
 
 

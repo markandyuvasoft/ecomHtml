@@ -1,3 +1,14 @@
+import navbar from "../nav.js"
+
+let navs = navbar()
+
+console.log(navs);
+
+let main = document.getElementById("navMain")
+
+main.innerHTML = navs
+
+
 let localUser = JSON.parse(localStorage.getItem("userName"))
 
 let productList = JSON.parse(localStorage.getItem("productList"))
@@ -7,7 +18,7 @@ let productList = JSON.parse(localStorage.getItem("productList"))
 let cartArray = JSON.parse(localStorage.getItem("AddCartData")) || []
 
 
-let total = 0
+let total = 0 
 
 
 
@@ -51,6 +62,7 @@ if (localUser !== null) {
 
 
     let logout = document.createElement("button")
+    logout.style.color = "white"
 
     logout.innerText = "Logout User"
 
