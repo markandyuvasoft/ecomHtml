@@ -1,22 +1,67 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="navMain">
+    <div id="navMain"></div>
 
-       
 
-        <div class="navChildTwo">
+
+    <!-- <div class="navChildTwo">
             <a href="../index.html">Home</a>
             <a href="../login/login.html">Logout</a>
-        </div>
+        </div> -->
 
     <h1 style="text-align: center;  margin-top: 100px; font-size: 50px;">Payment Success</h1>
-    
+
 </body>
+
+<script type="module">
+
+    import navbar from "../nav.js"
+    let navs = navbar()
+    let main = document.getElementById("navMain")
+    main.innerHTML = navs
+
+
+
+
+
+    let localUser = JSON.parse(localStorage.getItem("userName"))
+
+    let regisId = document.getElementById("registerId")
+    let logId = document.getElementById("loginId")
+    let cartId = document.getElementById("cartId")
+    let likeId = document.getElementById("likeId")
+    let userLogoId = document.getElementById("userId")
+    let srchId = document.getElementById("srchId")
+
+
+
+
+
+    cartId.href = "../cart/cart.html"
+
+    if (localUser !== null) {
+        regisId.innerHTML = null
+        regisId.style.display = "none"
+        logId.innerHTML = null
+        logId.style.display = "none"
+        userLogoId.innerHTML = null
+
+    }
+
+</script>
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </html>

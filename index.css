@@ -135,9 +135,15 @@
 .checkoutChild {
     width: 400px;
     height: 400px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    margin-top: 40px;
 }
 
+.checkoutChild>div>h1 {
+    margin-top: 15px;
+}
 
 .addCartButton:hover {
     border: 2px solid #65a30d;
@@ -149,7 +155,7 @@
 .checkOutHeadMain {
     text-align: center;
     margin-top: 100px;
-    line-height: 0.8;
+    line-height: 1.2;
 }
 
 .checkOutHeadMain>h1 {
@@ -162,6 +168,7 @@
     /* border: 1px solid; */
     width: 500px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
 }
 
 .inputmIna1>input {
@@ -194,7 +201,7 @@
     font-weight: bolder;
 }
 
-.otpMain>div>input {
+#opId {
     margin: 12px;
     width: 30%;
     height: 50px;
@@ -203,7 +210,7 @@
 }
 
 
-.otpMain>div>button {
+#otpId {
     width: 10%;
     height: 50px;
     background-color: #65a30d;
@@ -232,6 +239,17 @@
     background-color: #dee4e9;
 }
 
+
+#proName {
+    margin: 22px;
+    font-family: auto;
+    font-size: 15px;
+}
+
+#tol {
+    font-size: 20px;
+    font-weight: 700;
+}
 
 
 
@@ -320,14 +338,27 @@
         margin-top: 30px;
     }
 
-    .otpMain>div>input {
+    /* .otpMain>div>input {
         width: 75%;
     }
 
     .otpMain>div>button {
         width: 36%;
-    }
+    } */
 
+
+    #opId {
+        width: 75%;
+    }
+    
+    
+    #otpId {
+        width: 36%;
+    }
+    
+    .checkoutChild>div>h1 {
+        margin-top: 15px;
+    }
 }
 
 
@@ -407,8 +438,10 @@
     }
 
     .checkoutChild {
-        width: 100%;
+        width: 86%;
         height: 280px;
+        margin: auto;
+        margin-top: 18px;
     }
 
     #proName {
@@ -421,15 +454,28 @@
         margin-top: 30px;
     }
 
-    .otpMain>div>input {
+    /* .otpMain>div>input {
         width: 90%;
     }
 
     .otpMain>div>button {
         width: 36%;
+    } */
+
+    #opId {
+        width: 90%;
+    }
+    
+    
+    #otpId {
+        width: 36%;
     }
 
     #tol {
         font-size: 18px;
+    }
+
+    .checkoutChild>div>h1 {
+        margin-top: 15px;
     }
 }

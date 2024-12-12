@@ -63,13 +63,17 @@ if (localUser === null) {
 
 if (localUser !== null) {
     regisId.innerHTML = null
+    regisId.style.display = "none"
     logId.innerHTML = null
+    logId.style.display = "none"
+
 
     userLogoId.innerHTML = localUser                            //login user name show user icon logo ki jgh 
 
 
     let logout = document.createElement("button")
     logout.style.color = "white"
+    logout.style.height = "1px"
 
     logout.innerText = "Logout User"
 
@@ -90,11 +94,9 @@ if (localUser !== null) {
 export function displayProduct(data) {
 
     // let productMain = document.getElementById("productMain")
-    console.log(data, "ssssss");
+    console.log(data, "11212");
 
     data?.map((el) => {
-
-
         let div = document.createElement("div")
         div.setAttribute("class", "productChild")
 

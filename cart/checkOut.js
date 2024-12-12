@@ -20,8 +20,10 @@ let srchId = document.getElementById("srchId")
 cartId.href = "../cart/cart.html"
 
 if (localUser !== null) {
-    regisId.innerHTML = null
+     regisId.innerHTML = null
+    regisId.style.display = "none"
     logId.innerHTML = null
+    logId.style.display = "none"
     userLogoId.innerHTML = null
     // likeId.innerHTML = null
     // srchId.innerHTML = null

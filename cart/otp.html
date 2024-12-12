@@ -14,36 +14,19 @@
 
     <div class="otpMain">
 
-        <h1>Otp Here!!</h1>
-
-        <div>
-            <label for="">Enter Otp</label>
-            <br>
-            <input type="text" placeholder="enter otp">
-            <br>
-            <button id="otpId">Submit</button>
-        </div>
+        <form action="">
+            <div>
+                <label for="">Enter Otp</label>
+                <br>
+                <input id="opId" type="text" placeholder="enter otp">
+                <br>
+                <button id="otpId" type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 
-<script type="module">
-
-import navbar from "../nav.js"
-let navs = navbar()
-let main = document.getElementById("navMain")
-main.innerHTML = navs
-
-
-    let otp = document.getElementById("otpId")
-
-    otp.addEventListener("click", function () {
-
-        event.preventDefault()
-
-        window.location.href = "./success.html"
-    })
-
-</script>
+<script type="module" src="./otp.js"></script>
 
 <script src="https://cdn.tailwindcss.com"></script>
 

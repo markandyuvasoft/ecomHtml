@@ -48,7 +48,9 @@ if (localUser === null) {
 
 if (localUser !== null) {
     regisId.innerHTML = null
+    regisId.style.display = "none"
     logId.innerHTML = null
+    logId.style.display = "none"
     
     cartId.innerText = "Total" + " =" + Math.floor(total)
 

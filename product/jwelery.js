@@ -27,6 +27,8 @@ if (localUser !== null) {
 
     let logout = document.createElement("button")
     logout.style.color = "white"
+    logout.style.height = "1px"
+
 
     logout.innerText = "Logout User"
 
