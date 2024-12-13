@@ -2,18 +2,52 @@ import navbar from "./nav.js"
 let productMain = document.getElementById("productMain")
 
 
-
 let navs = navbar()
-
 let main = document.getElementById("navMain")
-
 main.innerHTML = navs
 
 
 
 let localUser = JSON.parse(localStorage.getItem("userName"))
-
 // let productList = JSON.parse(localStorage.getItem("productList"))
+
+
+
+let footerMain = document.getElementById("footerMain")
+
+let arr = ["https://preview.colorlib.com/theme/coloshop/images/slider_1.jpg", "	https://preview.colorlib.com/theme/academia/images/bg_1.jpg"]
+
+let img = document.createElement("img")
+
+img.setAttribute("class", "slideImage")
+
+let index = 0
+
+
+
+function showSlider() {
+
+
+    footerMain.innerHTML = ""
+
+    if (index === arr.length) {
+        index = 0
+    }
+
+    img.src = arr[index]
+
+    img.classList.add("fade-in");
+
+    index++
+
+    footerMain.append(img)
+
+}
+
+// showSlider()
+setInterval(showSlider, 4000)
+
+
 
 
 export async function getData(api) {

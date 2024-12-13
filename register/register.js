@@ -18,7 +18,7 @@ function RegisterDetails(event) {
 
     let x = Math.floor((Math.random() * 10000) + 2);
 
-    console.log(x, 111111111111111111111);
+    // console.log(x, 111111111111111111111);
     
 
     event.preventDefault()

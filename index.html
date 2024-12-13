@@ -21,7 +21,10 @@
 
     <div id="navMain"></div>
 
-    <div class="w-full xl:h-full h-5/6 border-black bg-[url('../img/banner-bg.jpg')] bg-no-repeat bg-center">
+    <!-- <div id="footerMain" class="w-full xl:h-full h-5/6 border-black bg-[url('../img/banner-bg.jpg')] bg-no-repeat bg-center"> -->
+    <div id="footerMain"
+        class="w-full xl:h-full h-5/6 border-black bg-[url('../img/banner-bg.jpg')] bg-no-repeat bg-center">
+
         <div class="w-full md:w-2/4 h-full md:h-4/5 flex items-center justify-center px-4">
             <div class="text-center md:text-left">
                 <p class="font-medium text-white text-lg font-serif">Men's Collection</p>
@@ -29,16 +32,19 @@
                     Show<span class="text-white">Your</span>
                 </h1>
                 <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl leading-relaxed font-black">
-                    Personal <span class="text-lime-600 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-relaxed font-black">Style</span>
+                    Personal <span
+                        class="text-lime-600 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-relaxed font-black">Style</span>
                 </h1>
-                <h4 class="text-white font-serif font-light text-lg sm:text-xl md:text-2xl">Fowl saw dry which a above together place.</h4>
+                <h4 class="text-white font-serif font-light text-lg sm:text-xl md:text-2xl">Fowl saw dry which a above
+                    together place.</h4>
                 <div class="w-40 h-10 justify-center items-center mt-4 mx-auto md:mx-0">
-                    <button class="w-full h-10 bg-lime-600 text-white font-semibold rounded-md">View Collections</button>
+                    <button class="w-full h-10 bg-lime-600 text-white font-semibold rounded-md">View
+                        Collections</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
 
     <!-- <div class="w-4/5 h-auto m-auto grid grid-cols-4 mt-20"> -->
@@ -74,8 +80,25 @@
 
         <h1 class="featuredH1">Featured product</h1>
         <p style="text-align: center;">Bring called seed first of third give itself now ment</p>
+
+
+        <div class="smallNavBar">
+
+            <div class="smallNavChild">
+                <a href="./index.html">All</a>
+            </div>
+
+            <div class="smallNavChildTwo">
+                <a href="./product/electronic.html">Electronics</a>
+            </div>
+
+            <div class="smallNavChildTwo">
+                <a href="./product/jwelery.html">Jwelery</a>
+            </div>
+        </div>
+
         
-    <div id="productMain"></div>
+        <div id="productMain"></div>
 
 </body>
 
@@ -93,14 +116,14 @@
 
 <script type="module">
 
-    import {displayProduct, getData} from "./index.js"
+    import { displayProduct, getData } from "./index.js"
 
     let api = "https://fakestoreapi.com/products"
-    
 
-    let proData = await  getData(api)
 
-     displayProduct(proData)
+    let proData = await getData(api)
+
+    displayProduct(proData)
 
 </script>
 
