@@ -51,7 +51,11 @@ if (localUser !== null) {
 }
 
 
-let jweApi = "https://fakestoreapi.com/products/category/electronics"
+// let jweApi = "https://fakestoreapi.com/products/category/electronics"
+
+
+let jweApi = "https://dummyjson.com/products/category/laptops"
+
 
 
 import { getData } from "../index.js";

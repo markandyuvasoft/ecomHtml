@@ -1,16 +1,15 @@
+
+
 import navbar from "../nav.js";
+
+
 
 let main = document.getElementById("navMain")
 
-let extraProductMain = document.getElementById("womenMain")
+main.innerHTML =  navbar()
 
 
 
-
-
-
-
-main.innerHTML = navbar()
 
 let localUser = JSON.parse(localStorage.getItem("userName"))
 
@@ -45,57 +44,24 @@ if (localUser !== null) {
 
         localStorage.removeItem("userName")
         window.location.href = "../login/login.html"
+
     }
 
     navChildThree.append(logout)
 }
 
-// let api = "https://dummyjson.com/products/category/womens-dresses"
 
-export async function getData(api) {
+// let jweApi = "https://fakestoreapi.com/products/category/electronics"
 
-    let data = await fetch(api)
 
-    let result = await data.json()
-
-    // console.log(result);
-
-    // display(result)
-
-    return result
-
-}
+let womenApi = "https://dummyjson.com/products/category/womens-dresses"
 
 
 
-export function display(result) {
-
-    result.products.map((el) => {
-
-        let div = document.createElement("div")
-        div.setAttribute("class", "productChild")
+import { getData } from "../index.js";
+import { displayProduct } from "../index.js";
 
 
-        let h1 = document.createElement("h1")
+let jewData = await getData(womenApi)
 
-        h1.innerText = el.title
-
-        let p = document.createElement("p")
-        p.innerText = el.price
-
-        let img = document.createElement("img")
-        img.setAttribute("class", "productImage")
-
-
-        img.src = el.images[0]
-
-
-        extraProductMain.append(div)
-
-        div.append(img, h1, p)
-    })
-}
-
-
-
-
+displayProduct(jewData)

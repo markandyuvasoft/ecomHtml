@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +6,16 @@
     <link rel="stylesheet" href="../index.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
 <body>
 
     <div id="navMain"></div>
-
-    <div id="womenMain"></div>
-
+   <div id="productMain"></div>
 
 
+    
 </body>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- <script type="module" src="./women.js"></script> -->
-
-<script type="module">
-
-    import { display, getData } from "./women.js"
-
-    let api = "https://dummyjson.com/products/category/womens-dresses"
-
-
-    let proData = await getData(api)
-
-    display(proData)
-</script>
-
+<script type="module" src="./women.js"></script>
 </html>

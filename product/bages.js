@@ -51,15 +51,17 @@ if (localUser !== null) {
 }
 
 
-let mensApi = "https://dummyjson.com/products/category/womens-bags"
+// let jweApi = "https://fakestoreapi.com/products/category/electronics"
+
+
+let bagApi = "https://dummyjson.com/products/category/womens-bags"
 
 
 
+import { getData } from "../index.js";
+import { displayProduct } from "../index.js";
 
-import { getData } from "./women.js";
-import { display } from "./women.js";
 
+let jewData = await getData(bagApi)
 
-let mensData = await getData(mensApi)
-
-display(mensData)
+displayProduct(jewData)

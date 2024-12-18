@@ -46,7 +46,9 @@ if (localUser !== null) {
 }
 
 
-let jweApi = "https://fakestoreapi.com/products/category/jewelery"
+// let jweApi = "https://fakestoreapi.com/products/category/jewelery"
+
+let jweApi = "https://dummyjson.com/products/category/womens-jewellery"
 
 
 import { getData } from "../index.js";

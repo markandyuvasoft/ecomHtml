@@ -129,12 +129,12 @@ export function displayProduct(data) {
     // let productMain = document.getElementById("productMain")
     console.log(data, "11212");
 
-    data?.map((el) => {
+    data?.products.map((el) => {
         let div = document.createElement("div")
         div.setAttribute("class", "productChild")
 
         let image = document.createElement("img")
-        image.src = el.image
+        image.src = el.images[0]
         image.setAttribute("class", "productImage")
 
         let title = document.createElement("h1")
