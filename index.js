@@ -57,7 +57,6 @@ export async function getData(api) {
     let data = await res.json();
     console.log(data, "65559");
 
-
     return data;
 }
 

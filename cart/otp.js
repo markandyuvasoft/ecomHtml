@@ -48,6 +48,7 @@ let array = JSON.parse(localStorage.getItem("RegisterUser"))
 
 function otpFun(event) {
     event.preventDefault()
+    
     let data = {
         otp: form.opId.value
     }
