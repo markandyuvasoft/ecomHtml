@@ -20,7 +20,7 @@ let srchId = document.getElementById("srchId")
 cartId.href = "../cart/cart.html"
 
 if (localUser !== null) {
-     regisId.innerHTML = null
+    regisId.innerHTML = null
     regisId.style.display = "none"
     logId.innerHTML = null
     logId.style.display = "none"
@@ -43,25 +43,145 @@ btnCheckout.addEventListener("click", function () {
 
 let cardData = JSON.parse(localStorage.getItem("AddCartData")) || []
 
-let TotalAmout = JSON.parse(localStorage.getItem("TotalAmout")) 
+let TotalAmout = JSON.parse(localStorage.getItem("TotalAmout"))
 
 console.log(cardData);
 
 
-let proName = document.getElementById("proName")
+// let proName = document.getElementById("proName")
 
-// let quan = document.getElementById("quan")
+// let warranty = document.getElementById("warranty")
+
+// let tol = document.getElementById("tol")
+
+
+
+// let titles = cardData.map((el) => el.title)
+
+
+// proName.innerText = "Product Name : " + titles.join("\n" +"\n");
+
+// tol.innerText = "Total Amount" + " " + ":" + " " +  Math.floor(TotalAmout) + "₹"
+
+// btnCheckout.innerText = Math.floor(TotalAmout) + "₹"
+
+
+
+
+
+let div = document.getElementById("div")
 
 let tol = document.getElementById("tol")
 
+let imagesHeaderMain = document.getElementById("imagesHeaderMain")
 
 
-let titles = cardData.map((el) => el.title)
+let extra = document.getElementById("extra")
 
 
-// proName.innerText = "Product Name =" + " " + titles; 
-proName.innerText = "Product Name :\n\n" + titles.join("\n" +"\n");
+
+let mainBtnDiv = document.getElementById('mainBtnDiv')
+
+
+
+
+let details = cardData.map((el) => {
+    // console.log(el.title, 12);
+
+    let productTile = document.createElement("h1")
+
+    let productWarty = document.createElement("h1")
+
+    let productPrice = document.createElement("p")
+
+    let productImgDiv = document.createElement("div")
+
+    let productImg = document.createElement("img")
+    productImg.setAttribute("class", "checkoutProductImg")
+
+    productImg.addEventListener("click", ()=> {
+
+        showImgFun(el)
+    })
+
+    productTile.innerText = "Product Name : " + el.title
+
+    productWarty.innerText = "Warranty : " + el.warrantyInformation
+
+    productPrice.innerText = "price : " + el.price
+
+    // productImg.src = el.images[0]
+
+    let proimg = el.images
+
+
+    // console.log(proimg, "proimages");
+
+    proimg.map((el) => {
+        productImg.src = el
+    })
+
+    productImgDiv.append(productImg)
+
+    div.append(productImgDiv, productTile, productWarty, productPrice)
+})
+
+
+function showImgFun (id) {
+
+
+    let proimg2 = id.images
+
+    let imagesContainer = document.createElement("div");
+    imagesContainer.setAttribute("class", "images-container");
+
+    let showImges = document.createElement("img")
+
+
+    showImges.src = proimg2[0];
+
+    imagesHeaderMain.append(showImges);
+
+
+    proimg2.map((el, index) => {
+
+
+    // console.log(el, 122222);
+        
+
+    let imageposter = document.createElement("img") 
+    
+    imageposter.src = el
+
+    imageposter.setAttribute("class", "checkoutImageBtn")
+
+    imageposter.addEventListener("click", (e)=> {
+        
+        e.preventDefault()
+
+            showImges.src = proimg2[index];
+            
+        })
+        imagesContainer.append(imageposter);
+
+        // mainBtnDiv.append(button)
+    })
+
+    imagesHeaderMain.append(imagesContainer);
+
+    // extra.append(imagesHeaderMain)
+
+}
+
+
+
+
+
+
+
+
 
 tol.innerText = "Total Amount" + " " + ":" + " " +  Math.floor(TotalAmout) + "₹"
 
 btnCheckout.innerText = Math.floor(TotalAmout) + "₹"
+
